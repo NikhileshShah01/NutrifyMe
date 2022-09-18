@@ -1,0 +1,53 @@
+
+
+
+.container-fluid {
+    width: 100%;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.top-banner {
+    width: 98%;
+    background: url('https://healthyeatinghub.com.au/wp-content/uploads/2014/07/healhty-vegan-lunch-bowl.-Avocado-quinoa-sweet-potato-tomato-spinach-and-chickpeas-vegetables-salad-893716420_5373x3582-scaled.jpeg') no-repeat center;
+    background-size: cover;
+    padding: 9.375rem;
+    position: relative;
+}
+
+.container-fluid h1 {
+    color: #0a0c77;
+    padding-left: 30px;
+    font-size: 28px;
+}
+
+.container-fluid p i {
+    padding-left: 25px;
+    font-size: 20px;
+    color: rgb(3, 70, 70);
+}
+
+.content {
+    position: absolute;
+    padding-right: 550px;
+    /* margin-bottom: 200px; */
+    padding-left: 30px;
+    padding-top: 25px;
+    color: rgb(12, 12, 12);
+    font-size: 17px;
+}
+
+.C1 {
+    position: absolute;
+    padding-right: 460px;
+    margin-top: 165px;
+    padding-left: 30px;
+    color: rgb(12, 12, 12);
+    font-size: 17px;
+}
+
+.C1 i {
+    color: saddlebrown;
+    font-size: 18px;
+}
