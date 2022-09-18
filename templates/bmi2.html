@@ -1,0 +1,132 @@
+> Nandita Agarwal:
+{% extends 'index.html' %}
+{% block script %}
+var bmi;
+var global =  this;
+function BMI()
+{
+var w=document.getElementById('weight').value;
+var h=document.getElementById('height').value;
+var res=w/(h/100 * h/100);
+bmi=(res.toFixed(2));
+
+console.log(bmi);
+
+    document.getElementById("result").innerHTML="Your BMI is "+bmi;
+   
+  console.log(typeof(bmi));
+
+if (bmi<18.5) {
+document.getElementById("heal").innerHTML="You are Underweight 😐";
+document.getElementById("heal").style.color = "#EAB543";
+var btype="underweight";
+}
+
+ else if (bmi<25.0) {
+    document.getElementById("heal").innerHTML="You are Healthy 😀";
+    document.getElementById("heal").style.color = "#44bd32";
+    var btype="healthy";
+}
+
+else if(bmi<30.0){
+    document.getElementById("heal").innerHTML="You are Overweight 😥";
+    document.getElementById("heal").style.color = "#EA2027";
+    var btype="overweight";
+}
+else{
+    document.getElementById("heal").innerHTML="You are Obese 😓";
+    document.getElementById("heal").style.color = "#e84118";
+    var btype="obese";
+}
+
+document.getElementById("dieting").innerHTML="Get Diet Plan";
+}
+
+
+function diety(){
+    if (bmi<18.5) {
+window.location="/showdiet";
+}
+else if (bmi<25.0) {
+    window.location = "/healthy";
+    }
+    
+    else if(bmi<30.0){
+        window.location = "/overweight";
+    }
+    else
+        {window.location = "/obese";}
+    }
+
+
+{% endblock script %}
+{% block nav %}
+    <nav class="px-4 py-2 text-gray-700 bg-red-300 flex justify-center rounded-2xl mx-48 text-xl">
+        <ul class="flex space-x-20 justify-end px-10">
+            <li class="cursor-pointer hover:text-blue-700 hover:underline">
+                <a target="_self" href="/details">My
+                Details </a>
+            </li>
+            <li class="cursor-pointer hover:text-blue-700 hover:underline">
+                <a target="_self" href="/bodyindex">BMI
+                    Calculator
+                </a>
+            </li>
+            <li class="cursor-pointer hover:text-blue-700 hover:underline">
+                <a target="_self" href="/diet"> Diet
+                Chart</a>
+            </li>
+            <li class="cursor-pointer hover:text-blue-700 hover:underline">
+                <a target="_self" href="/foodpyramid"> Food
+                Pyramid</a>
+            </li>
+            <li class="cursor-pointer hover:text-blue-700 hover:underline">
+                <a target="_self" href="/logout">Log out</a>
+            </li>
+        </ul>
+    </nav>
+{% endblock nav %}
+{% block main %} 
+<div class="bg-white rounded-3xl mx-48 my-1 h-auto py-3 px-9 ">
+    <div class="font-Licorice text-rose-700 text-4xl text-left pl-28  mx-2 font-semibold mt-2 flex">
+        <p class="text-4xl font-bold text-lime-500 px-4">
+            ‖
+        </p>
+        BMI Calculator 🤩
+    </div>
+    <hr class="bg-slate-900 w-auto mx-20 my-2">
+
+<div class="flex justify-center mt-12">
+        <label for="weight" >Weight :-</label>
+        <input type="number"
+               name="weight" required
+               id="weight"
+               class="border-2 border-black rounded-2xl mx-4 px-2 font-normal caret-gray-800 tracking-wider">
+        (kgs)
+    </div>
+    <div class="flex justify-center mt-6">
+        <label for="height" class="mr-1">Height :-</label>
+        <input type="number"
+               name="height"
+               id="height" required
+               class="border-2 border-black rounded-2xl mx-4 px-2 font-normal caret-gray-800 tracking-wider">
+        (cms)
+    </div>
+    <div class="flex justify-center">
+        <button class="bg-blue-500 hover:bg-blue-400 text-white mt-7 font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"
+          id="btn" onClick="BMI()">
+            Calculate
+          </button>
+      
+</div>
+    <div class="flex justify-center">
+        <p id="result" class="mt-5 text-xl text-slate-800"></p>
+    </div>
+    <div class="flex justify-center">
+        <p id="heal" class="mt-5 text-xl font-normal mb-6" ></p>
+    </div>
+   <div class="flex justify-center">
+  <a class="underline font-Licorice cursor-pointer text-blue-600" onclick="diety();" id="dieting" ></a>
+   </div>
+</div>
+{% endblock main %}

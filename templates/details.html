@@ -1,0 +1,64 @@
+{% extends 'index.html' %}
+{% block nav %}
+    <nav class="px-4 py-2 text-gray-700 bg-red-300 flex justify-center rounded-2xl mx-48 text-xl">
+        <ul class="flex space-x-20 justify-end px-10">
+            <li class="cursor-pointer hover:text-blue-700 hover:underline">
+                <a target="_self" href="/details">My
+                Details </a>
+            </li>
+            <li class="cursor-pointer hover:text-blue-700 hover:underline">
+                <a target="_self" href="/bodyindex">BMI
+                    Calculator
+                </a>
+            </li>
+            <li class="cursor-pointer hover:text-blue-700 hover:underline">
+                <a target="_self" href="/diet"> Diet
+                Chart</a>
+            </li>
+            <li class="cursor-pointer hover:text-blue-700 hover:underline">
+                <a target="_self" href="/foodpyramid"> Food
+                Pyramid</a>
+            </li>
+            <li class="cursor-pointer hover:text-blue-700 hover:underline">
+                <a target="_self" href="/logout">Log out</a>
+            </li>
+        </ul>
+    </nav>
+{% endblock nav %}
+{% block main %}
+    <div class="bg-white rounded-3xl mx-48 my-1 h-auto py-3 px-9 ">
+        <div class="font-Licorice text-rose-700 text-4xl text-left pl-28  mx-2 font-semibold mt-2 flex">
+            <p class="text-4xl font-bold text-lime-500 px-4">
+                ‖
+            </p>
+            My Details 🤩
+        </div>
+        <hr class="bg-gray-900 w-auto mx-20 my-2">
+        <br>
+        <form class="space-y-5">
+            <div class="flex justify-center ">
+                <label for="name" class="font-Licorice font-medium text-gray-700 mr-7">Name :</label>
+                <input type="text" placeholder= {{ customer.name }} disabled class="border-2 cursor-text
+                rounded-lg border-black  mx-4 px-2 font-normal  caret-slate-800 font-Licorice tracking-wider bg-clip-padding content-center">
+            </div>
+            <div class="flex justify-center ">
+                <label for="age" class="font-Licorice font-medium text-gray-700 mr-10">Age :</label>
+                <input type="number" placeholder={{ customer.age }} disabled class="border-2 rounded-lg cursor-text border-black  mx-4 px-2 font-normal  caret-slate-800 font-Licorice tracking-wider bg-clip-padding">
+            </div>
+            <div class="flex justify-center  ">
+                <label for="city" class="font-Licorice font-medium text-gray-700 mr-10 ">City :</label>
+                <input type="text" placeholder={{ customer.city }} disabled class="border-2 rounded-lg border-black cursor-text mx-4 px-2 font-normal  caret-slate-800 font-Licorice tracking-wider bg-clip-padding">
+            </div>
+            <div class="flex justify-center  ">
+                <label for="userid" class="font-Licorice font-medium text-gray-700 mr-4">User-ID :</label>
+                <input type="text" placeholder= {{ customer.userid }} disabled class="border-2 rounded-lg border-black cursor-text mx-4 px-2 font-normal  caret-slate-800 font-Licorice tracking-wider bg-clip-padding">
+            </div>
+            <div class="flex justify-center select-none ">
+                <label for="userpass "
+                       class="font-Licorice select-none font-medium text-gray-700 mr-1">Password :</label>
+                <input type="password" placeholder={{ customer.password }} disabled
+                       class="border-2 border-black select-none rounded-lg mx-4 px-2 font-normal cursor-text caret-slate-800 font-Licorice tracking-wider relative">
+            </div>
+        </form>
+    </div>
+{% endblock main %}

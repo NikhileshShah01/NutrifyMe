@@ -1,0 +1,204 @@
+{% extends 'index.html' %}
+{% block script %}
+function timer()
+
+{% endblock script %}
+{% block nav %}
+<nav class="px-4 py-2 text-gray-700 bg-red-300 flex justify-center rounded-2xl mx-48 text-xl">
+    <ul class="flex space-x-20 justify-end px-10">
+        <li class="cursor-pointer hover:text-blue-700 hover:underline">
+            <a target="_self" href="/details">My
+                Details </a>
+        </li>
+        <li class="cursor-pointer hover:text-blue-700 hover:underline">
+            <a target="_self" href="/bodyindex">BMI
+                Calculator
+            </a>
+        </li>
+        <li class="cursor-pointer hover:text-blue-700 hover:underline">
+            <a target="_self" href="/diet"> Diet
+                Chart</a>
+        </li>
+        <li class="cursor-pointer hover:text-blue-700 hover:underline">
+            <a target="_self" href="/foodpyramid"> Food
+                Pyramid</a>
+        </li>
+        <li class="cursor-pointer hover:text-blue-700 hover:underline">
+            <a target="_self" href="/">Log out</a>
+        </li>
+    </ul>
+</nav>
+{% endblock nav %}
+{% block main %}
+<div class="bg-white rounded-3xl mx-48 my-1 h-auto py-3 px-9 ">
+    <div class="font-Licorice text-rose-700 text-4xl text-left pl-28  mx-2 font-semibold mt-2 flex">
+        <p class="text-4xl font-bold text-lime-500 px-4">
+            ‖
+        </p>
+        Your Diet Plan 🤩
+    </div>
+    <hr class="bg-slate-900 w-auto mx-20 my-2">
+    <div class=" justify-center mt-8 grid grid-cols-2 font-medium">
+        <div class="ml-40 mb-2"> Name : {{ customer.name }} </div>
+        <div class="mb-2">Age : {{ customer.age}} </div>
+        <div class="ml-40">City : {{ customer.city}} </div>
+        <div>Calories req : 2200 Kcal </div>
+    </div>
+    <hr class="bg-slate-600 w-auto mx-20 my-3 mt-7">
+    <div class="flex justify-center mt-4">
+        <p class="underline text-xl mr-24 mt-2">Breakfast at : <b>8:00 A.M</b></p>
+    </div>
+    <div class="flex justify-center mt-4">
+        <table class="border-collapse border-4 border-slate-500 ">
+            <thead>
+                <tr bgcolor="#1e90ff">
+                    <th class="border-2 px-4 border-slate-600 ">Item</th>
+                    <th class="border-2 px-4 border-slate-600 ">Protein</th>
+                    <th class="border-2 px-4 border-slate-600 ">Fats</th>
+                    <th class="border-2 px-4 border-slate-600 ">Carbohydrate</th>
+                    <th class="border-2 px-4 border-slate-600 ">Carlories</th>
+                </tr>
+            </thead>
+            <tbody>
+              
+                <tr bgcolor="#f6e58d">
+                    <td class="border-2 px-4 border-slate-700 text-center">Bread butter</td>
+                    <td class="border-2 px-4 border-slate-700 text-center">0.2 g</td>
+                    <td class="border-2 px-4 border-slate-700 text-center">8.4 g</td>
+                    <td class="border-2 px-4 border-slate-700 text-center">50.8 g</td>
+                    <td class="border-2 px-4 border-slate-700 text-center">235 Kcal</td>
+                </tr>
+                <tr bgcolor="#f6e58d">
+                    <td class="border-2 px-4 border-slate-700 text-center">Milk Sugar Tea</td>
+                    <td class="border-2 px-4 border-slate-700 text-center">3.1 g</td>
+                    <td class="border-2 px-4 border-slate-700 text-center">3.4 g</td>
+                    <td class="border-2 px-4 border-slate-700 text-center">8.7 g</td>
+                    <td class="border-2 px-4 border-slate-700 text-center">77 Kcal</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="flex justify-center mt-4">
+        <p class="underline text-xl mr-24 mt-2">Lunch at : <b>1:00 P.M</b></p>
+    </div>
+    <div class="flex justify-center mt-4">
+        <table class="border-collapse border-4 border-slate-500 ">
+            <thead>
+                <tr bgcolor="#1e90ff">
+                    <th class="border-2 px-4 border-slate-600 ">Item</th>
+                    <th class="border-2 px-4 border-slate-600 ">Protein</th>
+                    <th class="border-2 px-4 border-slate-600 ">Fats</th>
+                    <th class="border-2 px-4 border-slate-600 ">Carbohydrate</th>
+                    <th class="border-2 px-4 border-slate-600 ">Carlories</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr bgcolor="#f6e58d">
+                    <td class="border-2 px-4 border-slate-700 text-center">Chapati </td>
+                    <td class="border-2 px-4 border-slate-700 text-center">2.6 g</td>
+                    <td class="border-2 px-4 border-slate-700 text-center">0.3 g</td>
+                    <td class="border-2 px-4 border-slate-700 text-center">16 g</td>
+                    <td class="border-2 px-4 border-slate-700 text-center">80 Kcal</td>
+                </tr>
+                <tr bgcolor="#f6e58d">
+                    <td class="border-2 px-4 border-slate-700 text-center">Rajma Masala</td>
+                    <td class="border-2 px-4 border-slate-700 text-center">3.1 g</td>
+                    <td class="border-2 px-4 border-slate-700 text-center">3.6 g</td>
+                    <td class="border-2 px-4 border-slate-700 text-center">12.1 g</td>
+                    <td class="border-2 px-4 border-slate-700 text-center">102 Kcal</td>
+                </tr> <tr bgcolor="#f6e58d">
+                    <td class="border-2 px-4 border-slate-700 text-center">Jeera Rice</td>
+                    <td class="border-2 px-4 border-slate-700 text-center">5.7 g</td>
+                    <td class="border-2 px-4 border-slate-700 text-center">2.4 g</td>
+                    <td class="border-2 px-4 border-slate-700 text-center">57.6 g</td>
+                    <td class="border-2 px-4 border-slate-700 text-center">277 Kcal</td>
+                </tr>
+               
+            </tbody>
+        </table>
+    </div>
+
+    <div class="flex justify-center mt-4">
+        <p class="underline text-xl mr-24 mt-2">Snacks at : <b>5:00 P.M</b></p>
+    </div>
+    <div class="flex justify-center mt-4">
+        <table class="border-collapse border-4 border-slate-500 ">
+            <thead>
+                <tr bgcolor="#1e90ff">
+                    <th class="border-2 px-4 border-slate-600 ">Item</th>
+                    <th class="border-2 px-4 border-slate-600 ">Protein</th>
+                    <th class="border-2 px-4 border-slate-600 ">Fats</th>
+                    <th class="border-2 px-4 border-slate-600 ">Carbohydrate</th>
+                    <th class="border-2 px-4 border-slate-600 ">Carlories</th>
+                </tr>
+            </thead>
+            <tbody>
+               
+                <tr bgcolor="#f6e58d">
+                    <td class="border-2 px-4 border-slate-700 text-center">Corn Sandwich</td>
+                    <td class="border-2 px-4 border-slate-700 text-center">9.9 g</td>
+                    <td class="border-2 px-4 border-slate-700 text-center">12.2 g</td>
+                    <td class="border-2 px-4 border-slate-700 text-center">35.1 g</td>
+                    <td class="border-2 px-4 border-slate-700 text-center">323 Kcal</td>
+              </tr>
+              <tr bgcolor="#f6e58d">
+                <td class="border-2 px-4 border-slate-700 text-center">Banana Shake</td>
+                <td class="border-2 px-4 border-slate-700 text-center">5.3 g</td>
+                <td class="border-2 px-4 border-slate-700 text-center">6.3 g</td>
+                <td class="border-2 px-4 border-slate-700 text-center">29.1 g</td>
+                <td class="border-2 px-4 border-slate-700 text-center">194 Kcal</td>
+            </tr>               
+            </tbody>
+        </table>
+    </div>
+    <div class="flex justify-center mt-4">
+        <p class="underline text-xl mr-24 mt-2">Dinner at : <b>8:00 P.M</b></p>
+    </div>
+    <div class="flex justify-center mt-4">
+        <table class="border-collapse border-4 border-slate-500 ">
+            <thead>
+                <tr bgcolor="#1e90ff">
+                    <th class="border-2 px-4 border-slate-600 ">Item</th>
+                    <th class="border-2 px-4 border-slate-600 ">Protein</th>
+                    <th class="border-2 px-4 border-slate-600 ">Fats</th>
+                    <th class="border-2 px-4 border-slate-600 ">Carbohydrate</th>
+                    <th class="border-2 px-4 border-slate-600 ">Carlories</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr bgcolor="#f6e58d">
+                    <td class="border-2 px-4 border-slate-700 text-center">Chapati </td>
+                    <td class="border-2 px-4 border-slate-700 text-center">2.6 g</td>
+                    <td class="border-2 px-4 border-slate-700 text-center">0.3 g</td>
+                    <td class="border-2 px-4 border-slate-700 text-center">16 g</td>
+                    <td class="border-2 px-4 border-slate-700 text-center">80 Kcal</td>
+                </tr>
+                <tr bgcolor="#f6e58d">
+                    <td class="border-2 px-4 border-slate-700 text-center">Bhindi Masala</td>
+                    <td class="border-2 px-4 border-slate-700 text-center">2.9 g</td>
+                    <td class="border-2 px-4 border-slate-700 text-center">1.9 g</td>
+                    <td class="border-2 px-4 border-slate-700 text-center">7.2 g</td>
+                    <td class="border-2 px-4 border-slate-700 text-center">60 Kcal</td>
+                </tr> <tr bgcolor="#f6e58d">
+                    <td class="border-2 px-4 border-slate-700 text-center">Boondi Raita</td>
+                    <td class="border-2 px-4 border-slate-700 text-center">5.9 g</td>
+                    <td class="border-2 px-4 border-slate-700 text-center">7.5 g</td>
+                    <td class="border-2 px-4 border-slate-700 text-center">17 g</td>
+                    <td class="border-2 px-4 border-slate-700 text-center">242 Kcal</td>
+                </tr>
+               
+            </tbody>
+        </table>
+    </div>
+    <div class="flex justify-center mt-4">
+        <p class="underline text-xl mt-3 mb-2"><b>Note : </b>Drink Atleast 3L of Water Everyday</p>
+    
+    </div>
+    <div class="flex justify-center ">
+        <p class="underline text-xl mt-3 mb-2">
+            <b>Tip : </b>Drink Lukewarm Water and Coconut Water for Good Health
+    </p>
+</div>
+</div>
+{% endblock main %}

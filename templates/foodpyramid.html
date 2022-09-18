@@ -1,0 +1,43 @@
+{% extends 'index.html' %}
+{% block nav %}
+    <nav class="px-4 py-2 text-gray-700 bg-red-300 flex justify-center rounded-2xl mx-48 text-xl">
+        <ul class="flex space-x-20 justify-end px-10">
+            <li class="cursor-pointer hover:text-blue-700 hover:underline">
+                <a target="_self" href="/details">My
+                Details </a>
+            </li>
+            <li class="cursor-pointer hover:text-blue-700 hover:underline">
+                <a target="_self" href="/bodyindex">BMI
+                    Calculator
+                </a>
+            </li>
+            <li class="cursor-pointer hover:text-blue-700 hover:underline">
+                <a target="_self" href="/diet"> Diet
+                Chart</a>
+            </li>
+            <li class="cursor-pointer hover:text-blue-700 hover:underline">
+                <a target="_self" href="/foodpyramid"> Food
+                Pyramid</a>
+            </li>
+            <li class="cursor-pointer hover:text-blue-700 hover:underline">
+                <a target="_self" href="/logout">Log out</a>
+            </li>
+        </ul>
+    </nav>
+{% endblock nav %}
+{% block main %}
+    <div class="bg-white rounded-3xl mx-48 my-1 h-auto py-3 px-9 ">
+        <div class="font-Licorice text-rose-700 text-4xl text-left pl-28  mx-2 font-semibold mt-2 flex">
+            <p class="text-4xl font-bold text-lime-500 px-4">
+                ‖
+            </p>
+            Food Pyramid 🤩
+        </div>
+        <hr class="bg-slate-900 w-auto mx-20 my-2">
+        <div class="flex flex-wrap justify-center str h-auto">
+            <img src="/static/foodpyra.jpg"
+                 class=" transition-shadow ease-in-out duration-300 shadow-none hover:shadow-2xl h-auto w-2/3 py-9"
+                 alt=""/>
+        </div>
+    </div>
+{% endblock main %}

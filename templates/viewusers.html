@@ -1,0 +1,60 @@
+{% extends 'index.html' %}
+{% block nav %}
+<nav class="px-4 py-2 text-gray-700 bg-red-300 flex justify-center rounded-2xl mx-48 text-xl">
+    <ul class="flex space-x-20 justify-start px-10">
+        <li class="cursor-pointer hover:text-blue-700 hover:underline">
+            <a target="_self" href="/viewusers">View Customers</a>
+        </li>
+        <li class="cursor-pointer hover:text-blue-700 hover:underline">
+            <a target="_self" href="/bodyweight">BMI
+                Calculator
+            </a>
+        </li>
+        <li class="cursor-pointer hover:text-blue-700 hover:underline">
+            <a target="_self" href="/viewcharts"> View
+            Charts</a>
+        </li>
+        <li class="cursor-pointer hover:text-blue-700 hover:underline">
+            <a target="_self" href="/logout">Log out</a>
+        </li>
+    </ul>
+</nav>
+{% endblock nav %}
+{% block main %}
+    <div class="bg-white rounded-3xl mx-48 my-1 h-auto py-3 px-9 ">
+        <div class="font-Licorice text-rose-700 text-4xl text-left pl-28  mx-2 font-semibold mt-2 flex">
+            <p class="text-4xl font-bold text-lime-500 px-4">
+                ‖
+            </p>
+            Customers Detail 🤩
+        </div>
+        <hr class="bg-gray-900 w-auto mx-20 my-2">
+        <br>
+        <form class="space-y-5">
+            <div class="flex justify-center ">
+                <table class="border-collapse border-4 border-slate-500 ">
+                    <thead>
+                        <tr bgcolor="#1e90ff">
+                            <th class="border-2 px-4 border-slate-600 ">User-Id</th>
+                            <th class="border-2 px-4 border-slate-600 ">Name</th>
+                            <th class="border-2 px-4 border-slate-600 ">Age</th>
+                            <th class="border-2 px-4 border-slate-600 ">City</th>
+                            <th class="border-2 px-4 border-slate-600 ">Password</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for x in users %}
+                            <tr bgcolor="#f6e58d">
+                                <td class="border-2 px-4 border-slate-700 ">{{ x.userid }}</td>
+                                <td class="border-2 px-4 border-slate-700 ">{{ x.name }}</td>
+                                <td class="border-2 px-4 border-slate-700 ">{{ x.age }}</td>
+                                <td class="border-2 px-4 border-slate-700 ">{{ x.city }}</td>
+                                <td class="border-2 px-4 border-slate-700 ">{{ x.password }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </form>
+    </div>
+{% endblock main %}

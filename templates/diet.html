@@ -1,0 +1,85 @@
+{% extends 'index.html' %}
+{% block head %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon"
+        href="https://play-lh.googleusercontent.com/-Qm8n0wsyBn_0tdMtivoYJUZ9mBlNLi5KAnHPoJ7I5_goMJYo-G-x0E--9ENcQPuRx9S">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>NutrifyMe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Licorice&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/static/diet.css">
+    {% endblock head %}
+{% block nav %}
+    <nav class="px-4 py-2 text-gray-700 bg-red-300 flex justify-center rounded-2xl mx-48 text-xl">
+        <ul class="flex space-x-20 justify-end px-10">
+            <li class="cursor-pointer hover:text-blue-700 hover:underline">
+                <a target="_self" href="/details">My
+                Details </a>
+            </li>
+            <li class="cursor-pointer hover:text-blue-700 hover:underline">
+                <a target="_self" href="/bodyindex">BMI
+                    Calculator
+                </a>
+            </li>
+            <li class="cursor-pointer hover:text-blue-700 hover:underline">
+                <a target="_self" href="/diet"> Diet
+                Chart</a>
+            </li>
+            <li class="cursor-pointer hover:text-blue-700 hover:underline">
+                <a target="_self" href="/foodpyramid"> Food
+                Pyramid</a>
+            </li>
+            <li class="cursor-pointer hover:text-blue-700 hover:underline">
+                <a target="_self" href="/logout">Log out</a>
+            </li>
+        </ul>
+    </nav>
+{% endblock nav %}
+{% block main %}
+    <div class="bg-white rounded-3xl mx-48 my-1 h-auto py-3 px-9 ">
+        <div class="font-Licorice text-rose-700 text-4xl text-left pl-28  mx-2 font-semibold mt-2 flex">
+            <p class="text-4xl font-bold text-lime-500 px-4">
+                ‖
+            </p>
+            Diet Chart 🤩
+        </div>
+        <hr class="bg-slate-900 w-auto mx-20 my-2">
+        <div class="container ">
+            <div class="row">
+                <div class="col-4">
+                    <div class="effect">
+                        <div class="effect-img h-auto flex justify-center">
+                            <img src="/static/food.jpg" class="mx-40 py-9">
+                        </div>
+                        <div class="effect-text">
+                            <div class="inner">
+                                <h2> <b> What is good nutrition?</b></h2>
+                                <p>Most people know good nutrition and physical activity can help maintain a healthy
+                                    weight. But the benefits of good nutrition go beyond weight.Good nutrition means
+                                    your body gets all the nutrients, vitamins, and minerals it needs to work its best.
+                                    Plan your meals and snacks to include nutrient-dense foods that are also low in
+                                    calories. Good nutrition can help:
+                                <ul>
+                                    <li> Reduce the risk of some diseases, including heart disease, diabetes, stroke,
+                                        some
+                                        cancers, and osteoporosis </li>
+                                    <li>Reduce high blood pressure </li>
+                                    <li> Lower high cholesterol </li>
+                                    <li>Improve your well-being </li>
+                                    <li>Improve your ability to fight off illness</li>
+                                    <li>Improve your ability to recover from illness or injury </li>
+                                    <li> Increase your energy level </li>
+                                </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock main %}

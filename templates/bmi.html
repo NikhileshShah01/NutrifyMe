@@ -1,1 +1,74 @@
+{% extends 'index.html' %}
+{% block script %}
+    function BMI()
+    {
+    var w=document.getElementById('weight').value;
+    var h=document.getElementById('height').value;
+    var res=w/(h/100 * h/100);
+    var bmi=(res.toFixed(2));
+    document.getElementById("result").innerHTML="Your BMI is "+bmi;
 
+    if (bmi<18.5) {
+    var ele=document.getElementById("heal").innerHTML="You are Underweight 😐";
+    document.getElementById("heal").style.color = "#EAB543";
+}
+    
+     else if (bmi<25.0) {
+        document.getElementById("heal").innerHTML="You are Healthy 😀";
+        document.getElementById("heal").style.color = "#44bd32";
+    }
+    
+    else if(bmi<30.0){
+        document.getElementById("heal").innerHTML="You are Overweight 😥";
+        document.getElementById("heal").style.color = "#EA2027";
+    }
+    else{
+        document.getElementById("heal").innerHTML="You are Obese 😓";
+        document.getElementById("heal").style.color = "#e84118";
+    }
+    document.getElementById("log").innerHTML=" Please Login to get your free diet plan ";
+    }
+{% endblock script %}
+{% block main %}
+    <div class="bg-gray-100 rounded-3xl mx-48 my-1 h-auto py-3 pl-9">
+        <div class="font-Licorice text-rose-700 text-4xl text-left pl-28  mx-2 font-semibold mt-2 flex">
+            <p class="text-4xl font-bold text-lime-500 px-4">
+                ‖
+            </p>
+            BMI Calculator 🤩
+        </div>
+        <hr class="bg-slate-900 w-auto mx-20 my-2">
+        <div class="flex justify-center mt-12">
+            <label for="weight" >Weight :-</label>
+            <input type="number"
+                   name="weight"
+                   id="weight" required
+                   class="border-2 border-black rounded-2xl mx-4 px-2 font-normal caret-gray-800 tracking-wider">
+            (kgs)
+        </div>
+        <div class="flex justify-center mt-6">
+            <label for="height" class="mr-1">Height :-</label>
+            <input type="number"
+                   name="height"
+                   id="height" required
+                   class="border-2 border-black rounded-2xl mx-4 px-2 font-normal caret-gray-800 tracking-wider">
+            (cms)
+        </div>
+        <div class="flex justify-center">
+            <input type="submit"
+                   value="Calculate"
+                   id="btn"
+                   onClick="BMI()"
+                   class="border-2 rounded-3xl px-3 py-2 text-xl border-orange-400 bg-orange-400 text-center text-yellow-50 mt-7 hover:bg-white hover:text-orange-400 hover:border-2 hover:border-orange-500 cursor-pointer">
+        </div>
+        <div class="flex justify-center">
+            <p id="result" class="mt-5 text-xl text-slate-800"></p>
+        </div>
+        <div class="flex justify-center">
+            <p id="heal" class="mt-4 text-xl font-normal" ></p>
+        </div>
+        <div class="flex justify-center">
+            <p id="log" class="mt-6 text-xl font-normal font-mono bg-[url('https://graphicriver.img.customer.envatousercontent.com/files/125141327/590.jpg?auto=compress%2Cformat&q=80&fit=crop&crop=top&max-h=8000&max-w=590&s=c4188b39cff3763697879969d5c0cb1d')]" ></p>
+        </div>
+    </div>
+{% endblock main %}
